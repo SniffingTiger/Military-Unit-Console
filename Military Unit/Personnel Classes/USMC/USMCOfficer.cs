@@ -52,7 +52,7 @@ namespace Military_Unit.Personnel_Classes.USMC
             Console.WriteLine();
 
             // Input date of birth
-            Console.Write("Input your Marine's date of birth (yyyy,mm,dd): ");
+            Console.Write("Input your Marine's date of birth. Follow this format, including commas: 'yyyy,mm,dd': ");
 
             this.DOB = DateTime.Parse(Console.ReadLine());
         }

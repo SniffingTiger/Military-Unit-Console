@@ -48,7 +48,7 @@ namespace Military_Unit
 
             Console.WriteLine();
 
-            Console.Write("Input date of birth (yyyy,mm,dd): ");
+            Console.Write("Input date of birth. Follow this format, including commas: 'yyyy,mm,dd': ");
 
             this.DOB = DateTime.Parse(Console.ReadLine());
         }

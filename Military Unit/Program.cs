@@ -25,10 +25,18 @@ namespace Military_Unit
                 Fireteam1.AddToFireteam();
 
                 Console.Write("\nWould you like to add another member to the fireteam?" +
-                                "\n     Input 1 for Yes, 2 for No:");
+                                "\n     Input 1 for Yes, 2 for No: ");
 
-                Console.WriteLine();
-                int oneortwo = Convert.ToInt32(Console.ReadLine());
+                int oneortwo = GetInt();
+
+                while (oneortwo != 1 && oneortwo != 2)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("\n     Input 1 for Yes, 2 for No:");
+                    oneortwo = GetInt();
+                    Console.WriteLine();
+                }
+
                 if (oneortwo == 2)
                 {
                     fireteamcreationdone = true;
@@ -44,6 +52,22 @@ namespace Military_Unit
             // Fireteam secures objective
             Fireteam1.FireteamObjectiveSecured();
             Console.ReadLine();
+        }
+
+        public static int GetInt()
+        {
+            try
+            {
+                int inputInt = Convert.ToInt32(Console.ReadLine());
+                return inputInt;
+            }
+            catch (FormatException fEx)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write("\nYour input must be a number! Try again: ");
+                Console.ResetColor();
+                return GetInt();
+            }
         }
     }
 }

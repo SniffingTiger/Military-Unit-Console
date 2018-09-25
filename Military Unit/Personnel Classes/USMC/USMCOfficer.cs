@@ -36,7 +36,14 @@ namespace Military_Unit.Personnel_Classes.USMC
 
             Console.Write("\nInput your Marine's rank #: ");
 
-            int x = Convert.ToInt32(Console.ReadLine());
+            int x = Program.GetInt();
+            while (x < (int)USMCOfficerRank.SecondLieutenant || x > (int)USMCOfficerRank.General)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Input a rank # between 1 and 10!");
+                Console.ResetColor();
+                x = Program.GetInt();
+            }
             this.Rank = ((USMCOfficerRank)x).ToString();
 
             Console.WriteLine();

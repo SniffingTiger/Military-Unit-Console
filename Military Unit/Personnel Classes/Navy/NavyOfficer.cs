@@ -36,7 +36,7 @@ namespace Military_Unit.Personnel_Classes.Navy
 
             Console.Write("\nInput your Sailor's rank #: ");
 
-            int x = Convert.ToInt32(Console.ReadLine());
+            int x = Program.GetInt();
             this.Rank = ((NavyOfficerRank)x).ToString();
 
             Console.WriteLine();

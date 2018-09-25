@@ -35,10 +35,13 @@ namespace Military_Unit.Personnel_Classes
                             "\n5 - Warrant Officer" +
                             "\n");
 
-            int menuselection = Convert.ToInt32(Console.ReadLine());
+            int menuselection = Program.GetInt();
             while (menuselection < (int)PersonnelTypes.USMCEnlisted || menuselection > (int)PersonnelTypes.WarrantOfficer)
             {
-                menuselection = Convert.ToInt32(Console.ReadLine());
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Input a menu item between 1 and 5!");
+                Console.ResetColor();
+                menuselection = Program.GetInt();
             }
 
             switch (menuselection)

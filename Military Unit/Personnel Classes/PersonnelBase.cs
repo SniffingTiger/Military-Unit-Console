@@ -24,6 +24,7 @@ namespace Military_Unit
             DOB = DateTime.Parse("2999,01,01");
         }
 
+        // Returns the age of the person
         public int AgeOfPersonnel()
         {
             int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
@@ -32,6 +33,7 @@ namespace Military_Unit
             return age;
         }
 
+        // Fills in information for a generic person
         public virtual void CreatePersonnel()
         {
             Console.Write("Input first name: ");
@@ -51,6 +53,7 @@ namespace Military_Unit
             this.DOB = DateTime.Parse(Console.ReadLine());
         }
 
+        // Returns the full name of a person
         public string FullName()
         {
             string fullname;
@@ -58,6 +61,7 @@ namespace Military_Unit
             return fullname;
         }
 
+        // Returns full information of a person
         public string FullInfo()
         {
             if (MiddleInitial is null)

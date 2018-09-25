@@ -13,14 +13,17 @@ namespace Military_Unit.Personnel_Classes.USMC
 
         public override void CreatePersonnel()
         {
+            // Input first name
             Console.Write("Input your Warrant Officer's first name: ");
             this.FirstName = Console.ReadLine();
             Console.WriteLine();
 
+            // Input last name
             Console.Write("Input your Warrant Officer's last name: ");
             this.LastName = Console.ReadLine();
             Console.WriteLine();
 
+            // Select rank
             string[] rankArray = new string[5];
             for (int i = 1; i < 5; i++)
             {
@@ -48,6 +51,7 @@ namespace Military_Unit.Personnel_Classes.USMC
 
             Console.WriteLine();
 
+            // Input date of birth
             Console.Write("Input your Warrant Officer's date of birth (yyyy,mm,dd): ");
 
             this.DOB = DateTime.Parse(Console.ReadLine());

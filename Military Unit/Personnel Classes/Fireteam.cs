@@ -13,18 +13,20 @@ namespace Military_Unit.Personnel_Classes
     {
         public PersonnelBase[] fireteamArray;
 
-        // Initialize a fireteam with a NULL PersonnelBase array
+        // Initialize a fireteam with an empty PersonnelBase array
         public Fireteam()
         {
             fireteamArray = new PersonnelBase[0];
         }
 
+        // Adds one more item to fireteamArray, and passes the selected person type into the last array index
         public void AddPersonnel(PersonnelBase person)
         {
             Array.Resize(ref fireteamArray, fireteamArray.Length + 1);
             fireteamArray[fireteamArray.Length - 1] = person;
         }
 
+        // Adds a person to a fireteam
         public void AddToFireteam()
         {
             Console.WriteLine("Input a number 1 - 5 to add a fireteam member:" +
@@ -104,6 +106,7 @@ namespace Military_Unit.Personnel_Classes
             }
         }
 
+        // Prints a message that shows the fireteam advancing toward objective
         public void FireteamAdvance()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -114,6 +117,7 @@ namespace Military_Unit.Personnel_Classes
             Console.ResetColor();
         }
 
+        // Prints a message that shows the fireteam securing the objective
         public void FireteamObjectiveSecured()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;

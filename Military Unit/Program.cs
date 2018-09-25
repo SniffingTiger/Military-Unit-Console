@@ -16,9 +16,10 @@ namespace Military_Unit
             Console.WriteLine("Here, you will create a fireteam, after which it will advance and secure the objective!");
             Console.WriteLine();
 
-            // Create fireteam
+            // Create new instance of Fireteam
             Fireteam Fireteam1 = new Fireteam();
 
+            // Add members to Fireteam1
             bool fireteamcreationdone = false;
             do
             {
@@ -54,6 +55,7 @@ namespace Military_Unit
             Console.ReadLine();
         }
 
+        // Method for getting integer input and handling associated errors
         public static int GetInt()
         {
             try

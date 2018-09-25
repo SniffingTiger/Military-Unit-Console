@@ -11,7 +11,6 @@ namespace Military_Unit.Personnel_Classes.USMC
         public USMCOfficer()
             : base() { }
 
-        // TODO: write CreatePersonnel override for USMC Officers
         public override void CreatePersonnel()
         {
             Console.Write("Input your Marine's first name: ");

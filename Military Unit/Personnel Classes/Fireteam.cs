@@ -106,7 +106,7 @@ namespace Military_Unit.Personnel_Classes
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             foreach (PersonnelBase item in fireteamArray)
             {
-                Console.WriteLine(item.FullName() + "advances toward the objective.");
+                Console.WriteLine(item.Rank + " " + item.LastName + " advances toward the objective.");
             }
             Console.ResetColor();
         }

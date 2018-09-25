@@ -11,7 +11,6 @@ namespace Military_Unit.Personnel_Classes.Navy
         public NavyEnlisted()
             : base() { }
 
-        // TODO: write CreatePersonnel override for Navy Enlisted
         public override void CreatePersonnel()
         {
             Console.Write("Input your Sailors's first name: ");
